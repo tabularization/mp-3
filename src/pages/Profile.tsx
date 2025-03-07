@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useEffect } from "react";
 
 const StyledProfile = styled.main`
   padding: 3.5vh 3.5vw;
@@ -43,6 +44,9 @@ const Paragraph = styled.p`
 `;
 
 export default function Profile() {
+  useEffect(() => {
+    document.title = "Home | My Resume";
+  }, []);
   return (
     <StyledProfile>
       <h1>Hello, I'm Dennis 👋</h1>

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useEffect } from "react";
 import Calculator from "../components/Calculator";
 
 const ProjectsContainer = styled.main`
@@ -42,6 +43,9 @@ const ProjectLink = styled.a`
 `;
 
 export default function Projects() {
+  useEffect(() => {
+    document.title = "Projects | My Resume";
+  }, []);
   return (
     <ProjectsContainer>
       <h1>Projects</h1>

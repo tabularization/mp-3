@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useEffect } from "react";
 
 const OrganizationsContainer = styled.main`
   padding: 3.5vh 3.5vw;
@@ -43,6 +44,9 @@ const Summary = styled.p`
 `;
 
 export default function Organizations() {
+  useEffect(() => {
+    document.title = "Organizations | My Resume";
+  }, []);
   return (
     <OrganizationsContainer>
       <h1>Professional Organizations</h1>

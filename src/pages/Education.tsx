@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import { useEffect } from "react";
 const EducationContainer = styled.main`
   padding: 3.5vh 3.5vw;
   width: 70%;
@@ -35,6 +35,9 @@ const EducationItem = styled.li`
 `;
 
 export default function Education() {
+  useEffect(() => {
+    document.title = "Education | My Resume";
+  }, []);
   return (
     <EducationContainer>
       <h1>Education History</h1>

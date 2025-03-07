@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useEffect } from "react";
 
 const ExperiencesContainer = styled.main`
   padding: 3.5vh 3.5vw;
@@ -40,6 +41,9 @@ const Paragraph = styled.p`
 `;
 
 export default function Experiences() {
+  useEffect(() => {
+    document.title = "Experiences | My Resume";
+  }, []);
   return (
     <ExperiencesContainer>
       <h1>Work Experience</h1>

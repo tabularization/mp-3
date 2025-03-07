@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useEffect } from "react";
 
 const ReferencesContainer = styled.main`
   padding: 3.5vh 3.5vw;
@@ -55,6 +56,9 @@ const ReferenceImage = styled.img`
 `;
 
 export default function References() {
+  useEffect(() => {
+    document.title = "References | My Resume";
+  }, []);
   return (
     <ReferencesContainer>
       <h1>References</h1>
